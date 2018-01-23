@@ -1,0 +1,127 @@
+@import '../../mq';
+
+@media #{$tabletPortrait} {
+  //    @import '../mobile';
+  & {
+    .nav-btn {
+      display: block;
+      width: 30px;
+      height: 40px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      span {
+        height: 2px;
+        width: 100%;
+        background: #000;
+        display: block;
+        &:nth-child(2) {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .nav {
+      max-width: 50px;
+      z-index: 9999;
+      min-height: 95vh;
+      transition: 0.4s;
+      .nav-content {
+        display: none;
+      }
+      &.active {
+        max-width: 100%;
+        min-height: 100vh;
+        .nav-content {
+          display: block;
+        }
+      }
+    }
+    .main,
+    .footer {
+      overflow: hidden;
+      margin-left: 50px;
+    }
+    .head #video {
+      width: inherit;
+      height: 100%;
+    }
+    .about-title {
+      font-size: 45px;
+    }
+    .iframe {
+      margin-top: 0;
+    }
+    .about-photo,
+    .about-item {
+      margin-top: 20px;
+    }
+    .of_work-info {
+      font-size: 16px;
+    }
+    .of_work-grid {
+      text-align: center;
+    }
+    .of_work-grid .of_work-item {
+      position: static;
+      min-width: 240px;
+      margin-bottom: 20px;
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 40% !important ;
+      &:first-child {
+            width: 40%;
+      }
+      &:nth-child(5) {
+        display: none;
+      }
+      &:nth-child(7) {
+        width: 40%;
+      }
+    }
+    .of_work-title {
+      font-size: 33px;
+      text-align: left;
+    }
+    #concept-img {
+      img {
+        width: 100%;
+      }
+    }
+    .md-firsr {
+      -ms-flex-order: -1;
+      order: -1;
+    }
+    .registration-form {
+      margin: 0 auto 20px;
+    }
+    .registration-item {
+      br {
+        display: none;
+      }
+    }
+    .about_info-item {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gmap-container {
+      max-width: 454px;
+      margin: 0 auto;
+    }
+    .showroom {
+      br {
+        display: none;
+      }
+    }
+    .iframe {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .showroom_map-item {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+}

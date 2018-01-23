@@ -1,0 +1,1288 @@
+@import 'variables';
+
+*{
+  outline: none;
+}
+a:focus, a:hover, input:focus, input:hover {
+  text-decoration: none;
+  color: inherit;
+}
+body { 
+  @import 'MediaQueries/main';
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 195px;
+  width: 100%;
+  min-height: 95vh;
+  background-color: #ffffff;
+      display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  .logo {
+    position: absolute;
+    top: 59px;
+    max-width: 84px;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: 100%;
+    }
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 10%;
+    li {
+      display: block;
+      margin: 15px 0;
+      position: relative;
+      &.active {
+        a {
+          position: relative;
+          &:before {
+            content: "";
+            width: 20px;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+          }
+        }
+      }
+      a {
+        color: #000000;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        transition: 0.2s;
+        text-decoration: none;
+         position: relative;
+          &:before {
+            content: "";
+            width: 0;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            transition: 0.2s;
+          }
+        &:hover {
+          color: #000000;
+          &:before {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+  .lang {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    li {
+      padding: 0 5px;
+      position: relative;
+      display: inline-block;
+      &:first-child {
+        &:before {
+          content: "";
+          height: 14px;
+          width: 2px;
+          background: #cbd0d9;
+          position: absolute;
+          right: -4px;
+          bottom: 4px;
+        }
+      }
+      a {
+      color: #cbd0d9;
+        
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+          &.active {
+            color: #000000;
+          }
+      }
+    }
+  }
+}
+
+.main {
+  margin-left: 195px;
+  position: relative;
+}
+
+.head {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  padding-bottom: 10%;
+  .container {
+    position: relative;
+    &:before {
+      content: 'Vitkovskaya';
+      opacity: 0.1;
+      color: #ffffff;
+      font-family: "Futura Demi C";
+      font-size: 140px;
+      font-weight: 700;
+      line-height: 48px;
+      position: absolute;
+      left: 2%;
+      top: -45%;
+      transform: translateX(-50%) rotateZ(-90deg);
+    }
+  }
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+     display: -ms-flexbox;
+    display: flex;
+  -ms-flex-align: end !important;
+      align-items: flex-end !important;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.head-title {
+  color: #ffffff;
+  font-family: "Futura Demi C";
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 86px;
+  
+}
+
+.head-info {
+  color: #ffffff;
+  font-family: "Futura Futuris Light C";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 50px;
+}
+
+.order-btn {
+  height: 44px;
+  border: 2px solid #ffffff;
+  padding: 11px 37px 13px;
+  color: #ffffff;
+  font-family: "Futura Demi C";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.9px;
+  transition: 0.2s;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  &:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    position: absolute;
+    opacity: 0.4;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%) rotateZ(45deg);
+  }
+  &:before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  transition: 0.2s;
+    
+  }
+  span {
+    display: block;
+    transition: 0.2s;
+    height: 16px;
+    color: #ffffff;
+    
+  }
+  &:active, &:focus {
+    background-color: #75c7ca;
+    span {
+      color: #408b8e;
+      
+    }
+  }
+  &:hover, &:active, &:focus {
+    &:before {
+      left: 81%;
+      opacity: 1;
+    }
+    &:after {
+      opacity: 1;
+    }
+     .one {
+    transform: translateY(-350%);
+    }
+    .two {
+    transform: translateY(-100%);
+    }
+    background-color: #7fedf1; 
+    border-color: #7fedf1;
+    padding: 13px 45px 13px 29px;
+  }
+  .one {
+    transform: translateY(0%);
+  }
+  .two {
+    transform: translateY(100%);
+    color: #ffffff;
+  }
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.about {
+  padding: 125px 0;
+  text-align: center;
+  background: #fff;
+  &.page {
+    .about-photo {
+      margin-top: 0;
+    }
+  }
+}
+
+.about-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 48px;
+  font-weight: 400; 
+  line-height: 52px;
+  margin-bottom: 29px;
+}
+
+.about-info {
+  color: #171617;
+  font-family: "Futura Futuris Light C";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.iframe, .iframe-full {
+  max-width: 628px;
+  margin-top: 80px;
+  .play-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    margin: 0 auto;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:before {
+      content: "";
+      width: 10px;
+      height: 14px;
+      border: 10px solid transparent;	
+      border-left: 14px solid #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-20%) translateY(-50%);
+
+    }
+  }
+}
+
+.iframe-full {
+  max-width: 100%;
+  margin-top: 0;
+}
+
+.about-photo {
+  margin-top: -80px;
+  position: relative;
+  padding-left: 25px;
+  p {
+    font-family: "Futura Demi C";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+    margin: 0;
+    letter-spacing: 0.84px;
+    transform: rotateZ(-90deg) translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: -47%;
+    width: 100%;
+    text-align: right;
+    span {
+      color: #919191;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.about-item {
+  max-width: 433px;
+  text-align: left;
+  margin-top: 99px;
+  p {
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    &.bold {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+  }
+}
+
+.more-btn {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  transition: 0.2s;
+  position: relative;
+  padding: 0 26px 0 42px;
+  &:before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #000;
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: 0.2s;
+  }
+  &:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    position: absolute;
+    opacity: .4;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%) rotateZ(45deg);
+  }
+  &:hover {
+    color: #7fedf1;
+    &:before {
+      left: 91%;
+      background: #7fedf1;
+    }
+    &:after {
+      border-color: #7fedf1;
+    }
+  }
+  
+}
+
+.of_work-grid {
+  position: relative;
+  min-height: 921px;
+  .of_work-item {
+    overflow: hidden;
+    a.item-link {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 5656;
+    }
+    .order-btn {
+      background-color: #1c1c1c;
+      border-color: #1c1c1c;
+      &:hover {
+        background: #7fedf1;
+        border-color: #7fedf1;
+        &:before {
+          left: 79%;
+        }
+      }
+    }
+    position: absolute;
+    .iframe { 
+      margin-top: 0;
+    }
+    img, .iframe {
+      width: 100%;
+    }
+    &:first-child {
+      right: 0;
+      top: 0;
+      width: 306px;
+    }
+    &:nth-child(2) {
+      left: 0;
+      top: 62px;
+       width: 40%;
+      max-width: 498px;
+    }
+    &:nth-child(3) {
+      left: 42%;
+      top: 62px;
+      width: 29%;
+      max-width: 366px;
+    }
+    &:nth-child(4) {
+      max-width: 366px;
+      left: 0;
+      top: 37.5%;
+      width: 29%;
+    }
+    &:nth-child(5) {
+      max-width: 83px;
+      left: 33%;
+      top: 39%;
+      width: 29%;
+    }
+    &:nth-child(6) {
+      left: 31%;
+      top: 63%;
+      width: 40%;
+      max-width: 498px;
+    }
+    &:nth-child(7) {
+     max-width: 366px;
+      right: -30px;
+      top: 37.5%;
+      width: 29%;
+    }
+  }
+}
+
+.of_work {
+  padding: 125px 0;
+}
+
+.of_work-info {
+  span {
+    color: #000000;
+    display: inline-block;
+    padding-right: 70px;
+    position: relative;
+    &:before {
+      content: "";
+      width: 40px;
+      height: 0;
+      border: 1px solid #000000;
+      position: absolute;
+      top: 45%;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+  }
+  color: #d7d7d7;
+font-family: "Futura Demi C";
+font-size: 18px;
+font-weight: 400;
+line-height: 36px;
+}
+
+.of_work-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 45px;
+}
+
+.item-animation {
+  overflow: hidden;
+//  max-height: 490px;
+  background-position-x: center;
+     transition: all 2s;
+  &:hover {
+    transform: scale(1.1);
+     transition: all 2s;
+  }
+    
+  img {
+    opacity: 0;
+    transition: 0.4s;
+  }
+}
+
+.dark-btn {
+  &.order-btn {
+      background-color: #1c1c1c;
+      border-color: #1c1c1c;
+      &:hover {
+        background: #7fedf1;
+        border-color: #7fedf1;
+        &:before {
+          left: 81%;
+        }
+      }
+    }
+}
+
+.concept {
+  padding: 125px 0;
+  text-align: center;
+  .col-3, .col-7 {
+    padding: 0;
+  }
+}
+
+.concept-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px;
+  margin-bottom: 55px;
+}
+
+.concept-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 55px;
+  position: relative;
+  &:before {
+    content: "V. Concept";
+    width: 555px;
+    height: 111px;
+    opacity: 0.46;
+    color: #ededed;
+    font-family: "Futura Demi C";
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 60px;
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  li {
+    color: #919191;
+    font-family: "Futura Demi C";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+#concept-img {
+  position: relative;
+  padding-right: 30px;
+  display: inline-block;
+  img {
+    max-width: 366px;
+    background-color: #f2f2f2;
+    padding: 41px 27px;
+  }
+}
+
+.concept-date {
+  color: #919191;
+  font-family: "Futura Demi C";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.84px;
+  position: absolute;
+  top: 40px;
+  right: -40px;
+  transform: rotateZ(-90deg);
+  margin: 0;
+}
+
+.concept-btn {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  position: relative;
+  padding-bottom: 26px;
+  display: inline-block;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    color: #7fedf1;
+  }
+  &:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      position: absolute;
+      opacity: .4;
+      bottom: 0%;
+      right: 0;
+      transform:  rotateZ(45deg);
+  }
+  &:after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    right: 0px;
+    bottom: 3.5px;
+    opacity: 0.3;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.registration {
+  padding: 125px 0;
+}
+
+.registration-form {
+  background-color: #1c1c1c;
+  padding: 99px 101px;
+  max-width: 498px;
+  label {
+    color: #646464;
+    font-family: "Futura Demi C";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 1.2px;
+    display: block;
+    margin-bottom: 40px;
+    &.active {
+        color: #7fedf1;
+      }
+    input, textarea {
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid rgba(248, 248, 248, 0.32);
+      color: #ffffff;
+      font-family: "Futura Futuris Light C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 36px;
+      max-height: 45px;
+      &:focus {
+        border-color: #7fedf1;
+      }
+    }
+  }
+  button.order-btn {
+    &:hover {
+      &:before {
+        left: 78%;
+      }
+      
+    }
+  }
+}
+
+.registration-item {
+  .title {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 52px;
+    margin-bottom: 60px;
+  }
+  p {
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    b {
+      display: block;
+      color: #000000;
+      line-height: 56px;
+      font-family: "Futura Demi C";
+    }
+  }
+}
+
+.clients {
+  padding: 125px 0;
+}
+
+.clients-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px;
+  max-width: 230px;
+  margin:  0 auto;
+}
+
+.clients-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    max-width: 235px;
+    height: 160px;
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 24px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 7.5px;
+    line-height: 7;
+    &:nth-child(4) {
+      img {
+            height: 100%;
+      }
+    }
+    &:nth-child(3), &:nth-child(6) {
+          margin-right: 0;
+        }
+        &:nth-child(1), &:nth-child(4) {
+          margin-left: 0;
+        }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.clients-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-left: 194px;
+  background-color: #fafafa;
+  padding: 100px 0 180px;
+  .container {
+    max-width: 1130px;
+  }
+  
+  p {
+    color: #999999;
+    font-family: "Futura Futuris Light C";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    span {
+      display: block;
+      color: #000000;
+      font-family: "Futura Demi C";
+      margin-bottom: 20px;
+    }
+    a {
+    color: #999999;
+      display: block;
+    }
+  }
+}
+
+.footer-logo {
+  img {
+    max-width: 84px;
+  }
+  margin-bottom: 25px;
+}
+
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    vertical-align: bottom;
+    margin:  0 10px;
+    a {
+      display: block;
+      opacity: 0.7;
+      transition: 0.2s;
+      &:hover {
+        opacity: 1;
+      }
+      &.fb {
+        width: 9px;
+        height: 18px;
+        background: url('../images/fb.svg') no-repeat;
+        background-size: 100%;
+      }
+      &.inst {
+        width: 16px;
+        height: 16px;
+        background: url('../images/inst.svg') no-repeat;
+        background-size: 100%;
+      }
+      &.ytb {
+        width: 18px;
+        height: 22px;
+        background: url('../images/ytb.svg') no-repeat;
+        background-size: 100%;
+      }
+      &.pntr {
+        width: 17px;
+        height: 20px;
+        background: url('../images/pntr.svg') no-repeat;
+        background-size: 100%;
+      }
+      &.be {
+        width: 22px;
+        height: 14px;
+        background: url('../images/be.svg') no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #202020;
+  z-index: 99999;
+  padding: 14px 63px;
+  min-height: 60px;
+}
+
+.rezart-logo {
+  float: right;
+  display: inline-block;
+  svg {
+    fill: #fff;
+    width: 47px;
+  }
+  span {
+    display: block;
+    color: #000000;
+    font-size: 8px;
+    font-weight: 300;
+    line-height: 0;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}
+
+.footer-list {
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    a {
+      color: #65666a;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 41px;
+    }
+  }
+}
+
+.nav-btn {
+  display: none;
+}
+
+.photo-name {
+  text-align: left;
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-left: 25px;
+  margin:  20px 0 50px;
+}
+
+.about_info {
+  padding: 99px 0;
+}
+
+.about_info-title {
+  text-align: center;
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px;
+  margin-bottom: 30px;
+}
+
+.about_info-sub-title {
+  color: #171617;
+  font-family: "Futura Futuris Light C";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  margin:  0;
+  text-align: center;
+}
+
+.about_info-item {
+  p {
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 0;
+    b {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 20px;
+      margin-bottom: 15px;
+      display: block;
+    }
+  } 
+  margin-bottom: 35px;
+}
+
+.video {
+  padding: 100px 0;
+}
+
+.showroom {
+  padding: 200px 0 80px;
+  position: relative;
+}
+
+.showroom-before {
+  color: #d7d7d7;
+  font-family: "Futura Demi C";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  position: absolute;
+  top: 155px;
+  right: -75px;
+  transform: rotateZ(-90deg);
+  span  {
+    color: #000000;
+    display: inline-block;
+    padding-right: 118px;
+    position: relative;
+    &:before {
+      content: "";
+      height: 1px;
+      width: 61px;
+      border: 2px solid #000000;
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.showroom-title {
+  text-align: center;
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 72px;
+  margin-bottom: 20px;
+  &.small {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+.showroom-info {
+  color: #171617;
+  font-family: "Futura Futuris Light C";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+
+.showroom-content {
+  color: #919191;
+  font-family: "Futura Futuris Light C";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.gmap {
+  max-width: 469px;
+  min-height: 526px;
+  filter: grayscale(100%)
+}
+
+.showroom_map {
+  padding-bottom: 200px;
+}
+
+.showroom_map-info {
+  max-width: 380px;
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin:  0 auto; 
+}
+
+.showroom_map-item {
+  position: relative;
+  text-align: center;
+  margin-top: 164px;
+  margin-bottom: 180px;
+  &:before {
+    content: "V. Concept";
+    width: 560px;
+    height: 111px;
+    opacity: 0.46;
+    color: #ededed;
+    font-family: "Futura Demi C";
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+  }
+  div {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 35px;
+  }
+  p {
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.tab-content {
+  .tab-item {
+    /* Сделал так из за гугл карт**/
+//    display: none;
+    height: 0;
+    overflow: hidden;
+    &.active {
+      display: block;
+      height: inherit;
+    }
+  }
+}
+
+.tab-link {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    color: #d7d7d7;
+    font-family: "Futura Demi C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    cursor: pointer;
+    position: relative;
+    &:first-child {
+    padding-right: 80px;
+      &:before {
+        content: "";
+        width: 40px;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+      
+    }
+    &.active {
+      color: #000000;
+    }
+  }
+}
+
+.gmap-container {
+  padding-right: 30px;
+  position: relative;
+  .gmap-address {
+    color: #919191;
+    font-family: "Futura Demi C";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.84px;
+    margin: 0;
+    transform: rotateZ(-90deg) translateX(-50%);
+    position: absolute;
+    top: -25px;
+    right: -47%;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.fixed-tab {
+      margin: 0;
+    transform: rotateZ(90deg);
+    position: fixed;
+    position: absolute;
+    top: 155px;
+    right: -75px;
+    text-align: right;
+    z-index: 999;
+}
+
+.project-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 72px;
+  margin: 0;
+}
+
+.project-info {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 72px;
+}
+
+.project {
+  padding: 200px 0;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 275px 0 50px;
+  li {
+    &.full-visible {
+      .project_h {
+        font-size: 48px;
+        line-height: 1;
+      }
+      .project-box {
+        width: 100%;
+        opacity: 1;
+        z-index: 555;
+        transition: 0.8s;
+      }
+      
+    }
+    position: relative;
+    .col-lg-6 {
+      position: relative;
+    }
+    .project-box {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: 0s;
+      width: 0;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.project-item {
+  p {
+    margin-top: 40px;
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+.project_h {
+  color: #000000;
+font-family: "Futura Demi C";
+font-size: 24px;
+font-weight: 400;
+  line-height: 1;
+  min-height: 80px;
+  text-align: right;
+  transition: 0.8s;
+  cursor: pointer;
+}

@@ -1,0 +1,252 @@
+& {
+  .nav-btn {
+    display: block;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    span {
+      height: 2px;
+      width: 100%;
+      background: #000;
+      display: block;
+      &:nth-child(2) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .nav {
+    max-width: 50px;
+    z-index: 9999;
+    min-height: 100vh;
+    transition: 0.4s;
+    .nav-content {
+      display: none;
+    }
+    &.active {
+      max-width: 100%;
+      .nav-content {
+        display: block;
+      }
+    }
+  }
+  .main,
+  .footer {
+    overflow: hidden;
+    margin-left: 50px;
+  }
+  .head #video {
+    width: inherit;
+    height: 100%;
+  }
+  .head-title {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+  .head-info {
+    font-size: 30px;
+    line-height: 1;
+  }
+  .about-title {
+    font-size: 35px;
+    line-height: 1.2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .about-info {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .iframe {
+    margin-top: 0;
+  }
+  .about-photo {
+    margin-top: 20px;
+  }
+  .xs-first {
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .about-item {
+    margin-top: 10px;
+    br {
+      display: none;
+    }
+    p {
+      font-size: 12px;
+      line-height: 1;
+      &.bold {
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .about, .of_work, .concept, .registration, .clients, .footer {
+    padding: 60px 0;
+  }
+  .of_work-info {
+    font-size: 16px;
+  }
+  .of_work-grid  {
+    text-align: center;
+  }
+  .of_work-grid .of_work-item {
+    position: static; 
+    min-width: 240px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    &:nth-child(5) {
+      min-width: 83px;
+    }
+  }
+  .of_work-title {
+    font-size: 33px;
+    text-align: left;
+  }
+
+  .concept-title {
+      font-size: 35px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+  }
+    .concept-list:before {
+      width: 100%;
+      font-size: 46px;
+      line-height: 60px;
+  }
+  #concept-img {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    img {
+      width: 100%;
+    }
+  }
+  .registration-form {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+  .registration-item .title {
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    br {
+      display: none;
+    }
+  }
+  .registration-item p {
+    br {
+      display: none;
+      line-height: 1;
+      font-size: 14px;
+    }
+  }
+  .clients-list li {
+    min-width: 240px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .clients-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  .footer-bottom {
+    position: static;
+    margin-left: 50px;
+    padding: 10px 15px;
+    width: inherit;
+    .footer-list {
+      float: none;
+    }
+    .rezart-logo {
+      float: none;
+      display: block;
+      text-align: right;
+    }
+  }
+  .footer {
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .clients-list {
+    text-align: center;
+  }
+  .about_info, .video {
+    padding: 60px 0;
+    br {
+      display: none;
+    }
+  }
+  .about_info-item {
+    margin-top: 20px;
+  }
+  .fixed-tab {
+    transform: rotateZ(0deg);
+    position: static;
+    text-align: center;
+    z-index: 999;
+    margin-top: 50px;
+  }
+  .showroom {
+    padding: 60px 0;
+    br {
+      display: none;
+    }
+  }
+  .showroom-title {
+    font-size: 45px;
+    line-height: 1.2;
+  }
+  .showroom-title.small {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-top: 20px;
+  }
+  .showroom_map-item {
+    margin: 20px 0 0;
+  }
+  .showroom_map-item:before {
+    font-size: 50px;
+  }
+  .showroom_map-item div {
+    margin-bottom: 10px;
+  }
+  .gmap {
+    min-height: 215px;
+  }
+  .showroom_map {
+    padding-bottom: 60px;
+  } 
+  .project-list li .project-box {
+    position: static;
+    max-height: inherit;
+    opacity: 1;
+    transform: translateY(0%);
+    width: 100%;
+  }
+  .project-list li {
+    margin-bottom: 20px;
+  }
+  .project_h {
+    min-height: inherit;
+  }
+  .project-list li.full-visible .project_h {
+    font-size: 24px;
+  }
+  .project-list {
+    margin: 0;
+  }
+  .project {
+    padding: 60px 0;
+  }
+  .project-title {
+    font-size: 45px;
+    line-height: 1.2;
+  }
+}

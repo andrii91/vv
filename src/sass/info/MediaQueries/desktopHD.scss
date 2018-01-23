@@ -1,0 +1,57 @@
+@import '../../mq';
+
+@media #{$desktopHD} {
+  @import '../desktop';
+  & {
+    .of_work-grid {
+      .of_work-item {
+        &:nth-child(2) {
+          left: 0;
+          top: 62px;
+          width: 40%;
+          max-width: 498px;
+        }
+        &:nth-child(3) {
+          left: 42%;
+          top: 62px;
+          width: 29%;
+          max-width: 366px;
+        }
+        &:nth-child(4) {
+          max-width: 366px;
+          left: 0;
+          top: 41%;
+          width: 29%;
+        }
+        &:nth-child(5) {
+          max-width: 83px;
+          left: 33%;
+          top: 42%;
+          width: 29%;
+        }
+        &:nth-child(6) {
+          left: 31%;
+          top: 69%;
+          width: 40%;
+          max-width: 498px;
+        }
+        &:nth-child(7) {
+          max-width: 366px;
+          right: -30px;
+          top: 41%;
+          width: 29%;
+        }
+      }
+    }
+    .clients-list {
+      li {
+        &:nth-child(3), &:nth-child(6) {
+          margin-right: 0;
+        }
+        &:nth-child(1), &:nth-child(4) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

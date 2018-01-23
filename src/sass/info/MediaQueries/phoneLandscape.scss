@@ -1,0 +1,12 @@
+@import '../../mq';
+
+@media #{$phoneLandscape} {
+    @import '../mobile';
+
+    & {
+      .head #video {
+        width: 100%;
+        height: inherit;
+      }
+    }
+}
