@@ -391,6 +391,14 @@ body {
   transition: 0.2s;
   position: relative;
   padding: 0 26px 0 42px;
+  &.smi-btn {
+    &:hover {
+    color: #7fedf1;
+    &:before {
+      left: 85%;
+    }
+  }
+  }
   &:before {
     content: "";
     width: 20px;
@@ -1131,7 +1139,7 @@ line-height: 36px;
 .tab-content {
   .tab-item {
     /* Сделал так из за гугл карт**/
-//    display: none;
+    display: none;
     height: 0;
     overflow: hidden;
     &.active {
@@ -1197,6 +1205,7 @@ line-height: 36px;
 .fixed-tab {
       margin: 0;
     transform: rotateZ(90deg);
+//   writing-mode: vertical-rl;
     position: fixed;
     position: absolute;
     top: 155px;
@@ -1285,4 +1294,844 @@ font-weight: 400;
   text-align: right;
   transition: 0.8s;
   cursor: pointer;
+}
+
+.project_page-item {
+    max-width: 336px;
+
+  .project_page-title {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 52px;
+    margin-bottom: 30px;
+  }
+  p {
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+.bread_crumbs {
+  list-style: none;
+  padding: 0;
+  margin: 70px 0 0;
+  li {
+    padding-right: 78px;
+    position: relative;
+    display: inline-block;
+    a {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 36.21px;
+      &.active {
+          color: #d7d7d7;
+      }
+    }
+    &:before {
+      content: "";
+      width: 41px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:last-child {
+      padding-right: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.project_page {
+  margin-top: 100px;
+  padding: 0px 0 100px;
+  max-width: 1159px;
+    &.fixed {
+      
+      .project_page-item {
+        position: fixed;
+        top: 200px;
+        left: 195px;
+        z-index: 656;
+      }
+  }
+}
+
+.project_page-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    span {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-weight: 600;
+    }
+  }
+}
+
+.project_page-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    width:94.5%;
+    margin: 15px;
+    overflow: hidden;
+    &:nth-child(3n+3) {
+      width: 45%;
+     +li {
+      width: 45%;
+        
+      }
+    }
+    a {
+      display: block;
+      position: relative;
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        p {
+          opacity: 1;
+        }
+      }
+      p {
+        background-color: #7fedf1;
+        margin: 0;
+        color: #f4f4f4;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.84px;
+        padding: 13px 20px;
+        display: inline-block;
+        position: absolute;
+        top: 40px;
+        left: -6px;
+        opacity: 0;
+        transition: 0.2s;
+      }
+    }
+    img {
+      max-width: 100%;
+      transition: 1s;
+    }
+  }
+}
+
+.page_project_template {
+  .tab-link.fixed-tab {
+    right: -175px;
+  }
+}
+
+#my-svg {
+  height: 450px;
+  width: 100%;
+}
+
+.smi-img {
+  max-width: 492px;
+  padding-right: 30px;
+  position: relative;
+  width: 50%;
+  min-width: 26px;
+  img {
+    max-width: 100%;
+  }
+  .smi-date {
+    transform: rotateZ(-90deg);
+    position: absolute;
+    top: 135px;
+    right: -130px;
+    text-align: right;
+    width: 100%;
+    z-index: 999;
+    color: #919191;
+    font-family: "Futura Demi C";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 56px;
+    /* Text style for "03. 08. 20" */
+    letter-spacing: 0.84px;
+    
+  }
+}
+
+.smi {
+  .project-list {
+    margin-top: 360px;
+  }
+}
+
+.blog {
+  padding: 200px 0;
+}
+
+.blog-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 72px;
+  span {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+
+.blog-item {
+  margin-top: 58px;
+  .item-title {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 44px;
+    margin-bottom: 40px;
+  }
+  p {
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+.item-img {
+  display: inline-block;
+  padding-right: 30px;
+  position: relative;
+  margin-bottom: 30px;
+  img {
+    width: 100%;  
+    background-color:  #d5d5d5;
+box-shadow: 11px 20px 24px 0px rgba(0, 0, 0, 0.19);
+
+  }
+  .item-date {
+//    transform: rotate(90deg);
+//    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 0;
+    right: 0;
+   
+    font-family: "Futura Demi C";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.84px;
+    color: #919191;
+    span {
+       color: #000000;
+    }
+  }
+}
+
+.blog-articles {
+  .title {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 52px;
+    margin-bottom: 40px;
+  }
+}
+
+.articles-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 40px;
+  li {
+    margin-bottom: 30px;
+    a {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 18px;
+      font-weight: 400;
+      span {
+        color: #919191;
+        font-family: "Futura Futuris Light C";
+        font-weight: 300;
+        display: block;
+      }
+      
+    }
+  }
+}
+
+.blog-tag {
+  .title {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 52px;
+  }
+}
+
+.tag-list {
+  margin: 35px 0 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 35px;
+  li {
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    border-right: 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    a {
+      margin: 0 5px;
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 36px;
+      position: relative;
+      padding: 0 10px;
+      &:after {
+        content: "";
+        border: 19px solid transparent;
+        border-left: 12px solid #c2c2c2;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        right: -36px;
+        transform: translateY(-50%);
+        z-index: 0;
+      }
+      &:before {
+        content: "";
+        border: 19px solid transparent;
+        border-left: 12px solid #fff;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        right: -35px;
+        transform: translateY(-50%);
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.pagination {
+  margin-top: 100px;
+  max-width: 240px;
+  text-align: center;
+}
+
+.pagination-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  li {
+    display: inline-block;
+    margin:  0 5px;
+    a {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+      &.active {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.pagination-arr_left {
+  float: left;
+  height: 16px;
+  width: 34px;
+  cursor: pointer;
+  margin-top: 3px;
+  position: relative;
+  &:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotateZ(-45deg);
+  }
+  &:after {
+    content: "";
+   background: #000;
+    height: 1px;
+    width: 34px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+.pagination-arr_right {
+  position: relative;
+  float: right;
+  height: 16px;
+  margin-top: 3px;
+  width: 34px;
+  cursor: pointer;
+  &:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-40%) rotateZ(45deg);
+  }
+  &:after {
+    content: "";
+   background: #000;
+    height: 1px;
+    width: 34px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-40%);
+  }
+}
+
+.post {
+  padding: 100px 0;
+}
+
+.post-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px;
+  margin-bottom: 20px;
+}
+
+.post-date {
+  opacity: 0.53;
+  font-family: "Futura Demi C";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: 0.84px;
+  color: #919191;
+
+  span {
+    color: #000000;
+  }
+}
+
+.post-full_img {
+  margin-top: 56px;
+  margin-bottom: 55px;
+  img {
+      max-width: 100%;
+    box-shadow: 7px 22px 40px rgba(0, 0, 0, 0.26);
+    background-color: #d5d5d5;
+  }
+}
+
+.post-item {
+  margin-bottom: 50px;
+  p {
+    b {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 30px;
+      display: block;
+    }
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+.post-img {
+  text-align: center;
+  margin-bottom: 56px;
+  img {
+    max-width: 557px;
+    background-color:  #d5d5d5;
+    box-shadow: 11px 20px 24px 0px rgba(0, 0, 0, 0.19);
+  }
+}
+
+.author {
+  width: 100%;
+  &:after {
+    content: " ";
+    clear: both;
+    display: block;
+  }
+  .name {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.84px;
+    float: left;
+  }
+  .tag {
+    float: right;
+    a {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.84px;
+    }
+      span {
+        color: #919191;
+        font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.84px;
+      } 
+  }
+}
+
+.post-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 76px;
+  
+  &:after {
+    content: " ";
+    clear: both;
+    display: block;
+  }
+  li {
+    text-align: center;
+    width: 50%;
+    float: left;
+    padding: 17px 0;
+    transition: 0.2s;
+    &:hover {
+      &:first-child, &:last-child {
+        background-color: #7fedf1;
+        border-color: #7fedf1;
+        a {
+          color: #ffffff;
+          span {
+             &:before {
+              border-color: #fff;
+            }
+            &:after {
+              background: #fff;
+            }
+          }
+        }
+      }
+    }
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    &:first-child {
+       
+      
+      a {
+        span {
+          padding-left: 55px;
+          position: relative;
+          &:before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) rotateZ(-45deg);
+          }
+          &:after {
+            content: "";
+           background: #000;
+            height: 1px;
+            width: 34px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+        }
+        
+      }
+    }
+    
+    a {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1;
+      display: block; 
+    }
+    &:last-child {
+      background-color: #f7f7f7;
+       border-color: #f7f7f7;
+       span {
+          padding-right: 55px;
+          position: relative;
+         &:before {
+          content: "";
+          width: 7px;
+          height: 7px;
+          border-top: 1px solid #000;
+          border-right: 1px solid #000;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-40%) rotateZ(45deg);
+        }
+        &:after {
+          content: "";
+         background: #000;
+          height: 1px;
+          width: 34px;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-40%);
+        }
+      }
+    }
+  }
+}
+
+.share {
+  margin-top: 60px;
+  .title {
+    color: #171617;
+    font-family: "Futura Futuris Light C";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+.share-social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  li {
+    display: inline-block;
+    height: 51px;
+    width: 51px;
+    border-radius: 50%;
+    overflow: hidden;
+      transition: 0.2s;
+    margin: 0 10px;
+    a {
+      display: block;
+      height: 50px;
+      width: 50px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-image: url('../images/social.png');
+      background-repeat: no-repeat;
+      transition: 0.2s;
+       opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      &.fb {
+        background-position: -21px top;
+      }
+      &.tw {
+        background-position: -88px top;
+      }
+      &.in {
+        background-position: -156px top;
+      }
+      &.gmail {
+        background-position: -223px top;
+      }
+    }
+  }
+}
+
+.contact-tab {
+      position: absolute;
+    right: 0;
+    top: 60px;
+      writing-mode: vertical-rl;
+  z-index: 156;
+  li {
+    padding-bottom: 80px;
+    &:first-child {
+      padding-right: 0;
+      &:before {
+        content: "";
+        height: 40px;
+        width: 2px;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        right: 45%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.contacts {
+  .tab-content {
+  .tab-item {
+    /* Сделал так из за гугл карт**/
+    display: block;
+    height: 0;
+    overflow: hidden;
+    &.active {
+      height: inherit;
+    }
+  }
+}
+  .gmap {
+    max-width: calc(100% - 30px);
+  }
+}
+
+.contact {
+  padding: 200px 0;
+}
+
+.contact-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+}
+
+.contact-item {
+  margin-top: 37px;
+  p {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 18px;
+  }
+  a, span  {
+    color: #919191;
+    font-family: "Futura Futuris Light C";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    display: block;
+  }
+}
+
+.success {
+  position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 91vh;
+    text-align: center;
+    overflow-x: hidden;
+  &:before {
+    content: "V. Concept";
+    width: 100%;
+    opacity: 0.46;
+    color: #ededed;
+    font-family: "Futura Demi C";
+    font-size: 220px;
+    font-weight: 400;
+    line-height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .order-btn {
+    background-color: #1c1c1c;
+    border-color: #1c1c1c;
+    &:hover {
+        background-color: rgb(127, 237, 241);
+        border-color: rgb(127, 237, 241);
+        padding: 13px 45px 13px 29px;
+    }
+  }
+  .order-btn:active:before, .order-btn:focus:before, .order-btn:hover:before {
+    left: 79%;
+  }
+}
+
+.success-logo {
+  img {
+    width: 118px;
+  }
+}
+
+.success-title {
+  padding: 76px 0 30px;
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 86px;
+}
+
+.success-info {
+  color: #919191;
+font-family: "Futura Futuris Light C";
+font-size: 24px;
+font-weight: 400;
+line-height: 28px;
+  margin-bottom: 70px;
+}
+
+.success-footer {
+  margin-left: 0;
 }

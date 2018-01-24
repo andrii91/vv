@@ -95,6 +95,24 @@ $(document).ready(function () {
     offset: "50%",
     repeat: true
   });
+  $('.project_page').viewportChecker({
+    classToAdd: 'fixed',
+    offset: "70%",
+    repeat: true,
+    callbackFunction: function (elem, action) {
+      $(window).scroll(function () {
+        var y = 200 - $(this).scrollTop();
+        if (y < 0) {
+          y = 0;
+        }
+
+        $('.project_page-item').css({
+          'top': y + "px",
+        })
+      })
+
+    }
+  });
 
   $('.photo-gif img').hover(function () {
       var photo = $(this).attr('src');
@@ -118,5 +136,21 @@ $(document).ready(function () {
       scrollTop: destination
     }, 500);
   })
+
+  function myCallback() {
+    console.log("5656");
+  }
+
+  $(".list-img").fancybox();
+/*   new Vivus('my-svg', {
+      duration: 3000,
+      file: 'images/s1.svg'
+    }, myCallback);*/
+
+/*
+  new Vivus('mySVG', {}, function (obj) {
+    obj.el.classList.add('finished');
+  });
+  */
 
 });
