@@ -3,6 +3,8 @@
 @media #{$desktopMega} {
     @import '../desktop';
     & {
-    	
+    	.smi .project-list {
+    margin-top: 360px;
+}
     }
 }
