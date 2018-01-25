@@ -329,4 +329,39 @@
     font-size: 70px;
   }
   
+  .architecture {
+    padding: 100px 0;
+  }
+  .architecture-title {
+    font-size: 35px;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  .architecture-item .title {
+    font-size: 27px;
+    line-height: 1;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .architecture-item p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .architecture-list {
+    margin-top: 75px;
+  }
+  .architecture-list .text .title {
+    font-size: 25px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .architecture-list .text .info p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .architecture-list .text .info {
+    margin-bottom: 20px;
+  }
 }
