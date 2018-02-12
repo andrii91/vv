@@ -168,14 +168,22 @@ $(document).ready(function () {
     });
     */
 
-  var vid = document.getElementById('video');
-  vid.volume = 0;
+  document._video = document.getElementById("video");
+  function getVideo() {
+	return document._video;
+}
 
-  $('#video-btn').click(function () {
-    vid.volume = 1;
-    $(this).toggleClass('active');
-    $(this).addClass('muted');
+  
+  $('.sound').click(function () {
+    getVideo().muted=false;
     $(this).hide();
+    $('.muted').show();
+  });
+  
+  $('.muted').click(function () {
+    getVideo().muted=true;
+    $(this).hide();
+    $('.sound').show();
   });
 
 

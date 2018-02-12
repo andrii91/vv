@@ -2296,7 +2296,7 @@ line-height: 28px;
   opacity: 0.7;
 }
 
-#video-btn {
+#video-btn, .video-btn  {
   background: url('../images/mute.svg') no-repeat center;
   background-size: 100%;
   width: 50px;
@@ -2306,10 +2306,10 @@ line-height: 28px;
   right: 10%;
   cursor: pointer;
   z-index: 222;
-  &.active {
+  &.muted {
     background: url('../images/speaker_icon.svg') no-repeat center;
     background-size: 100%;
-    opacity: 0;
+    display: none;
   }
 }
 
