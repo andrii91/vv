@@ -1,18 +1,26 @@
 @import '../../mq';
 
 @media #{$tabletLandscape} {
-    @import '../desktop';
+  @import '../desktop';
   .blog-articles {
-      margin-right: 0%;
-    }
-    .blog-articles, .blog-tag {
-      display: block;
-      max-width: 100%;
-      vertical-align: top;
-      margin-top: 0px;
-    }
+    margin-right: 0%;
+  }
+  .blog-articles,
+  .blog-tag {
+    display: block;
+    max-width: 100%;
+    vertical-align: top;
+    margin-top: 0px;
+  }
   .contact-item {
     display: block;
     margin-right: 0;
+  }
+  .head .container:before {
+    left: -25vw;
+    top: 20%;
+  }
+  .about_info-sub-title {
+    margin-bottom: 0;
   }
 }

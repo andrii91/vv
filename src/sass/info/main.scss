@@ -1538,7 +1538,7 @@ font-weight: 400;
 }
 
 .blog {
-  padding: 20vh 0;
+  padding: 15vh 0;
 }
 
 .blog-title {
@@ -2246,7 +2246,7 @@ line-height: 28px;
 }
 
 .architecture {
-  padding: 200px 0;
+  padding: 15vh 0;
 }
 
 .architecture-title {
@@ -2316,5 +2316,17 @@ line-height: 28px;
 .template_contacts {
   .footer {
     background: #fff;
+  }
+}
+
+.showroom_template {
+    .tab-item {
+    /* Сделал так из за гугл карт**/
+    display: block;
+    height: 0;
+    overflow: hidden;
+    &.active {
+      height: inherit;
+    }
   }
 }

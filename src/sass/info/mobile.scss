@@ -126,7 +126,7 @@
     width: 100%;
     text-align: center;
   }
-  #video-btn {
+  .video-btn {
     top: 10%;
     bottom: inherit;
   }
@@ -364,7 +364,7 @@
   }
   
   .architecture {
-    padding: 100px 0;
+    padding: 60px 0;
   }
   .architecture-title {
     font-size: 35px;
@@ -397,5 +397,31 @@
   }
   .architecture-list .text .info {
     margin-bottom: 20px;
+  }
+  .about_info-title, .project_page-item .project_page-title {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .about_info {
+    padding: 0;
+  }
+  .photo-name {
+    font-size: 21px;
+  }
+  .project-item p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .showroom-content, .project_page-item p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .showroom-info {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .showroom_map-info {
+    text-align: center;
   }
 }

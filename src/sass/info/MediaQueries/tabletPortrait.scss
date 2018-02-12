@@ -37,7 +37,7 @@
         }
       }
     }
-     .main {
+    .main {
       width: calc(100% - 50px);
     }
     .main,
@@ -125,7 +125,7 @@
       margin-right: auto;
     }
     .showroom_map-item {
-      margin-top: 60px;
+      margin-top: 60px; 
       margin-bottom: 60px;
     }
     .project_page.fixed .project_page-item {
@@ -136,7 +136,7 @@
     }
     .project_page-list li:nth-child(3n+3),
     .project_page-list li:nth-child(3n+3) + li {
-      width: 45%;
+      width: 44.5%;
     }
     .project_page {
       margin-top: 50px;
@@ -182,6 +182,19 @@
       font-weight: 400;
       line-height: 1;
       margin-bottom: 15px;
+    }
+    .head .container:before {
+      left: -41vw;
+      top: -19%;
+    }
+    .about_info-sub-title {
+      margin-bottom: 30px;
+    }
+    .about_info {
+      padding: 0;
+    }
+    .architecture {
+      padding: 100px 0;
     }
   }
 }

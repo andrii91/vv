@@ -104,11 +104,20 @@ $(document).ready(function () {
     });
   }
   if ($(window).width() < 1200 && $(window).width() > 767) {
-    
+
     $('.of_work-grid .of_work-item:nth-child(7)').css({
-      'height' : $('.of_work-grid .of_work-item:nth-child(6)').height()+'px'
+      'height': $('.of_work-grid .of_work-item:nth-child(6)').height() + 'px'
     })
   }
+
+  $(window).resize(function () {
+    if ($(window).width() < 1200 && $(window).width() > 767) {
+
+      $('.of_work-grid .of_work-item:nth-child(7)').css({
+        'height': $('.of_work-grid .of_work-item:nth-child(6)').height() + 'px'
+      })
+    }
+  })
 
   $('.project_page').viewportChecker({
     classToAdd: 'fixed',
@@ -128,6 +137,32 @@ $(document).ready(function () {
 
     }
   });
+
+/*  $('.project-title').viewportChecker({
+    offset: "0%",
+    repeat: true,
+    callbackFunction: function (elem, action) {
+      console.log(action);
+      if(action == 'add') {
+        $('.project-list li').first().addClass('full-visible');
+      }else{
+        $('.project-list li').first().removeClass('full-visible');
+      }
+    }
+  });
+
+  $('.footer').viewportChecker({
+    offset: "25%",
+    repeat: true,
+    callbackFunction: function (elem, action) {
+      console.log('f',action);
+      if(action == 'add') {
+        $('.project-list li').last().addClass('full-visible');
+      }else{
+        $('.project-list li').last().removeClass('full-visible');
+      }
+    }
+  });*/
 
   $('.photo-gif img').hover(function () {
       var photo = $(this).attr('src');
@@ -169,19 +204,20 @@ $(document).ready(function () {
     */
 
   document._video = document.getElementById("video");
-  function getVideo() {
-	return document._video;
-}
 
-  
+  function getVideo() {
+    return document._video;
+  }
+
+
   $('.sound').click(function () {
-    getVideo().muted=false;
+    getVideo().muted = false;
     $(this).hide();
     $('.muted').show();
   });
-  
+
   $('.muted').click(function () {
-    getVideo().muted=true;
+    getVideo().muted = true;
     $(this).hide();
     $('.sound').show();
   });
