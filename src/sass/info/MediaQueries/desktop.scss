@@ -3,7 +3,25 @@
 @media #{$desktop} {
     @import '../desktop';
     & {
-	  
+	  .of_work-grid .of_work-item:nth-child(6) {
+          top: 56%;
+      }
+      .of_work-grid .of_work-item:nth-child(7) {
+          right: 40px;
+      }
+      .concept {
+        padding-top: 0;
+      }
+      .architecture-list .text .content {
+        font-size: 17px;
+      }
+      .architecture-list .text .title {
+          font-size: 45px;
+          margin-bottom: 12px;
+      }
+      .project-list li .project-box .box {
+        width: 560px;
+      }
     }
 }
 

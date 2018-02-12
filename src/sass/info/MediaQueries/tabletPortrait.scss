@@ -37,6 +37,9 @@
         }
       }
     }
+     .main {
+      width: calc(100% - 50px);
+    }
     .main,
     .footer {
       overflow: hidden;
@@ -63,7 +66,9 @@
       text-align: center;
     }
     .of_work-grid .of_work-item {
-      position: static;
+      position: relative;
+      top: 0 !important;
+      left: 0 !important;
       min-width: 240px;
       margin-bottom: 20px;
       display: inline-block;

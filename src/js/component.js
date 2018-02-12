@@ -95,6 +95,21 @@ $(document).ready(function () {
     offset: "50%",
     repeat: true
   });
+
+  if ($(window).width() > 1200) {
+    $('.project_page-list li').addClass("hidden_animation").viewportChecker({
+      classToAdd: 'visible animated slideInUp', // Class to add to the elements when they are visible
+      offset: "20%",
+      offset: 0
+    });
+  }
+  if ($(window).width() < 1200 && $(window).width() > 767) {
+    
+    $('.of_work-grid .of_work-item:nth-child(7)').css({
+      'height' : $('.of_work-grid .of_work-item:nth-child(6)').height()+'px'
+    })
+  }
+
   $('.project_page').viewportChecker({
     classToAdd: 'fixed',
     offset: "70%",
@@ -102,8 +117,8 @@ $(document).ready(function () {
     callbackFunction: function (elem, action) {
       $(window).scroll(function () {
         var y = 200 - $(this).scrollTop();
-        if (y < 0) {
-          y = 0;
+        if (y < 20) {
+          y = 20;
         }
 
         $('.project_page-item').css({
@@ -142,15 +157,26 @@ $(document).ready(function () {
   }
 
   $(".list-img").fancybox();
-/*   new Vivus('my-svg', {
-      duration: 3000,
-      file: 'images/s1.svg'
-    }, myCallback);*/
+  /*   new Vivus('my-svg', {
+        duration: 3000,
+        file: 'images/s1.svg'
+      }, myCallback);*/
 
-/*
-  new Vivus('mySVG', {}, function (obj) {
-    obj.el.classList.add('finished');
+  /*
+    new Vivus('mySVG', {}, function (obj) {
+      obj.el.classList.add('finished');
+    });
+    */
+
+  var vid = document.getElementById('video');
+  vid.volume = 0;
+
+  $('#video-btn').click(function () {
+    vid.volume = 1;
+    $(this).toggleClass('active');
+    $(this).addClass('muted');
+    $(this).hide();
   });
-  */
+
 
 });

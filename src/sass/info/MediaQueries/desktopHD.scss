@@ -45,10 +45,12 @@
     }
     .clients-list {
       li {
-        &:nth-child(3), &:nth-child(6) {
+        &:nth-child(3),
+        &:nth-child(6) {
           margin-right: 0;
         }
-        &:nth-child(1), &:nth-child(4) {
+        &:nth-child(1),
+        &:nth-child(4) {
           margin-left: 0;
         }
       }
@@ -57,7 +59,21 @@
       width: 100%;
     }
     .smi .project-list {
-    margin-top: 360px;
-}
+      margin-top: 360px;
+    }
+    .head #video {
+      height: 115vh;
+    }
+    .head .container:before {
+      font-size: 14vh;
+      line-height: 4.8vh;
+      left: -16vw;
+    }
+    .project_page {
+      max-width: 100%;
+    }
+    .project_page-list li {
+      width: 93.2%;
+    }
   }
 }
