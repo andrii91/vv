@@ -16,7 +16,7 @@ body {
 
 .nav {
   position: fixed;
-  top: 0;
+  top: 0; 
   left: 0;
   max-width: 195px;
   width: 100%;
@@ -83,7 +83,7 @@ body {
         &:hover {
           color: #000000;
           &:before {
-            width: 20px;
+            width: 100%;
           }
         }
       }
@@ -163,7 +163,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 105%;
+    // width: 105%;
     height: 100vh;
     text-align: left;
   }
@@ -310,7 +310,7 @@ body {
 }
 
 .iframe, .iframe-full {
-  max-width: 628px;
+  // max-width: 628px;
   margin-top: 80px;
   .play-btn {
     width: 50px;
@@ -711,7 +711,7 @@ line-height: 36px;
 
 .registration {
   padding: 125px 0;
-  padding-top: 12vh;
+  padding: 12vh 0;
 }
 
 .registration-form {
@@ -783,6 +783,7 @@ line-height: 36px;
 
 .clients {
   padding: 125px 0;
+  padding: 12vh 0;
 }
 
 .clients-title {
@@ -795,6 +796,15 @@ line-height: 36px;
   margin:  0 auto;
 }
 
+.clients-list li:hover img {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+.clients-list li img {
+  transition: 0.2s;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
 .clients-list {
   list-style: none;
   padding: 0;
@@ -810,6 +820,7 @@ line-height: 36px;
     text-align: center;
     margin: 7.5px;
     line-height: 7;
+
     &:nth-child(4) {
       img {
             height: 100%;
@@ -836,6 +847,7 @@ line-height: 36px;
   margin-left: 194px;
   background-color: #fafafa;
   padding: 100px 0 180px;
+  padding: 10vh 0 18vh;
   .container {
     max-width: 1130px;
   }
@@ -924,26 +936,25 @@ line-height: 36px;
   width: 100%;
   background-color: #202020;
   z-index: 99999;
-  padding: 14px 63px;
-  min-height: 60px;
+  padding: 5px 63px;
 }
 
 .rezart-logo {
   float: right;
   display: inline-block;
   position: relative;
-  width: 70px;
-    height: 54px;
+  width: 35px;
+    height: 27px;
   
   svg {
     fill: #fff;
-    width: 70px;
+     width: 35px;
+    height: 27px;
     position: absolute;
     top: 0px;
     left: 0px;
     fill: #fff;
     background: #202020;
-    height: 54px;
     z-index: 20;
     &:nth-child(2) {
       left: -1px;
@@ -982,9 +993,9 @@ line-height: 36px;
     margin: 0 10px;
     a {
       color: #65666a;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 300;
-      line-height: 54px;
+      line-height: 1;
     }
   }
 }
@@ -1199,6 +1210,7 @@ line-height: 36px;
     line-height: 36px;
     cursor: pointer;
     position: relative;
+    transition: 0.2s;
     &:first-child {
     padding-right: 80px;
       &:before {
@@ -1214,6 +1226,9 @@ line-height: 36px;
       
     }
     &.active {
+      color: #000000;
+    }
+    &:hover {
       color: #000000;
     }
   }
@@ -1244,13 +1259,20 @@ line-height: 36px;
     transform: rotateZ(90deg);
 //   writing-mode: vertical-rl;
     position: fixed;
-    position: absolute;
+    /*position: absolute;*/
     top: 155px;
     right: -75px;
     text-align: right;
     z-index: 999;
 }
-
+.page-template-template_project  {
+  .fixed-tab {
+    right: -105px
+  }
+}
+.tab-content {
+  padding-right: 45px;
+}
 .project-title {
   color: #000000;
   font-family: "Futura Demi C";
@@ -1338,7 +1360,7 @@ font-family: "Futura Demi C";
 font-size: 24px;
 font-weight: 400;
   line-height: 1;
-  min-height: 80px;
+  margin: 40px 0;
   text-align: right;
   transition: 0.8s;
   cursor: pointer;
@@ -1667,6 +1689,10 @@ box-shadow: 11px 20px 24px 0px rgba(0, 0, 0, 0.19);
     border-right: 0;
     margin-right: 20px;
     margin-bottom: 10px;
+    transition: 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
     a {
       margin: 0 5px;
       color: #000000;
@@ -2061,7 +2087,7 @@ box-shadow: 11px 20px 24px 0px rgba(0, 0, 0, 0.19);
 }
 
 .contact-tab {
-      position: absolute;
+      position: fixed;
     right: 0;
     top: 60px;
       writing-mode: vertical-rl;
@@ -2217,9 +2243,9 @@ line-height: 28px;
     .content {
       color: #919191;
       font-family: "Futura Futuris Light C";
-      font-size: 18px;
+     font-size: 18px;
       font-weight: 400;
-      line-height: 1;
+      line-height: 26px;
       margin-bottom: 15px;
     }
     .info {
@@ -2299,11 +2325,11 @@ line-height: 28px;
 #video-btn, .video-btn  {
   background: url('../images/mute.svg') no-repeat center;
   background-size: 100%;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  bottom: 10%;
-  right: 10%;
+  bottom: 0%;
+  right: 15px;
   cursor: pointer;
   z-index: 222;
   &.muted {
@@ -2312,7 +2338,11 @@ line-height: 28px;
     display: none;
   }
 }
-
+.head {
+  .container {
+    position: relative;
+  }
+}
 .template_contacts {
   .footer {
     background: #fff;
@@ -2329,4 +2359,10 @@ line-height: 28px;
       height: inherit;
     }
   }
+}
+/* .architecture-svg.item-animation {
+  min-height: 400px;
+} */
+.mobile {
+  display: none;
 }

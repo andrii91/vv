@@ -1,39 +1,59 @@
 & {
   .nav-btn {
     display: block;
-    width: 30px;
-    height: 40px;
+    width: 20px;
+    height: 30px;
     position: absolute;
     top: 10px;
     left: 10px;
     span {
       height: 2px;
       width: 100%;
-      background: #000;
+      background: #fff;
       display: block;
       &:nth-child(2) {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
     }
   }
   .nav {
+    /*position: absolute;*/
+    &.bg {
+      .nav-btn {
+        span {
+          background: #000;
+        }
+      }
+    }
+
     max-width: 50px;
-    z-index: 995;
+    z-index: 999999;
     min-height: 100vh;
     transition: 0.4s;
+    background: transparent;
+
     .nav-content {
       display: none;
     }
     &.active {
       max-width: 100%;
+      background: #fff;
+
       .nav-content {
         display: block;
       }
+       .nav-btn {
+        span {
+          background: #000;
+        }
+      }
     }
   }
+
   .main {
-    width: calc(100% - 50px);
+    width: 100%;
+
   }
   .project-list li .project-box .box {
     width: 100%;
@@ -41,7 +61,14 @@
   .main,
   .footer {
     overflow: hidden;
-    margin-left: 50px;
+    margin-left: 0;
+  }
+  .head {
+    text-align: center;
+    .order-btn {
+      margin-top: 15vh;
+    }
+
   }
   .head #video {
     width: inherit;
@@ -115,11 +142,20 @@
     margin-right: auto;
     &:nth-child(5) {
       min-width: 83px;
+      display: none;
     }
+  }
+  .about-item {
+    text-align: center;
+  }
+  .tab-link {
+    text-align: center;
+    margin-bottom: 20px;
   }
   .of_work-title {
     font-size: 33px;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   .of_work-grid .of_work-item:first-child {
@@ -127,14 +163,18 @@
     text-align: center;
   }
   .video-btn {
-    top: 10%;
+    top: 10px;
     bottom: inherit;
   }
   .head .container:before {
-    top: -30px;
+    top: 50%;
+    left: -50%;
   }
   .tab-link li {
     font-size: 14px;
+  }
+  .head .container {
+    position: static;
   }
   .concept-title {
     font-size: 35px;
@@ -181,13 +221,19 @@
     font-size: 35px;
     margin-bottom: 20px;
     line-height: 1;
+    max-width: 100%;
+    text-align: center;
   }
+  .item-animation {
+ background-size: 100% !important; 
+}
   .footer-bottom {
     position: relative;
-    margin-left: 50px;
+    margin-left: 0px;
     padding: 10px 15px;
     width: inherit;
     left: 0;
+    z-index: 99;
     &:after {
       content: " ";
       clear: both;
@@ -229,7 +275,7 @@
   .fixed-tab {
     transform: rotateZ(0deg);
     position: static;
-    text-align: center;
+    text-align: left;
     z-index: 999;
     margin-top: 50px;
   }
@@ -424,4 +470,36 @@
   .showroom_map-info {
     text-align: center;
   }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+        background-color: #1c1c1c;
+    border-color: #1c1c1c;
+    max-width: 240px;
+    margin: 0 auto;
+    &.order-btn.dark-btn {
+      margin-top: 20px;
+    }
+  }
+  .concept-list li {
+    line-height: 40px;
+  }
+  .about_info-item p {
+    text-align: center;
+  }
+  .tab-content {
+    padding: 0;
+  }
 }
+&.showroom_template, &.page-template-template_about, &.single, &.page-template-template_architecture,
+&.page-template-template_blog, &.template_contacts {
+    .nav {
+      .nav-btn {
+        span {
+          background: #000;
+        }
+      }
+    }
+  }
